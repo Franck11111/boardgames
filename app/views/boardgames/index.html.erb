@@ -1,0 +1,41 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+      <h1>All Boardgames</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <% if @query %>
+        <p>You searched for <strong><%= @query %></strong>. We found <%= @boardgames.count %> boardgames out of our <%= Boardgame.count %> on our website.</p>
+      <% else %>
+        <p>All <%= boardgame.count %> boardgames.</p>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <% @boardgames.each do |boardgame| %>
+      <div class="col-4">
+        <div class="boardgame-card">
+          <div class="boardgame-card-image" style="background-image: url('<%= boardgame.picture_url %>')"></div>
+          <div class="boardgame-card-content">
+            <div class="boardgame-card-title">
+              <h4><%= boardgame.title %></h4>
+            </div>
+            <p><%= boardgame.address %></p>
+            <div class="flex">
+              <div class="flex">
+                <i class="material-icons mr-2">description</i><span><%= boardgame.description %></span>
+              </div>
+              <div class="flex ml-3">
+                <i class="material-icons mr-2">euro_symbol</i> <%= boardgame.price_per_day %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
