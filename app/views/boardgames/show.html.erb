@@ -10,5 +10,15 @@
   <%= @boardgame.user_id %>
 </p>
 
+<p>
+  <strong>Description:</strong>
+  <%= @boardgame.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @boardgame.price_per_day %>
+</p>
+
 <%= link_to 'Edit', edit_boardgame_path(@boardgame) %> |
-<%= link_to 'Back', baordgames_path %>
+<%= link_to 'Back', boardgames_path %>
