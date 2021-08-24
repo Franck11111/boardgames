@@ -6,7 +6,7 @@ class BoardgamesController < ApplicationController
       # Preventing SQL Injection and Database error for
       # unknown characters
     else
-      @boardgames = boardgames.all
+      @boardgames = Boardgame.all
     end
   end
 end
