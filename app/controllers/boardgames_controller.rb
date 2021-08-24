@@ -66,6 +66,6 @@ class BoardgamesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def boardgame_params
-      params.require(:boardgame).permit(:title, :user_id)
+      params.require(:boardgame).permit(:title, :user_id, :description, :price_per_day)
     end
 end
