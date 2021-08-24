@@ -35,9 +35,15 @@
               </div>
             </div>
             <div>
-              <%= link_to 'Show', boardgame %>
-              <%= link_to 'Edit', edit_boardgame_path(boardgame) %>
-              <%= link_to 'Destroy', boardgame, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <% if policy(boardgame).show? %>
+                <%= link_to "Show", boardgame %>
+              <% end %>
+              <% if policy(boardgame).edit? %>
+                <%= link_to "Edit", edit_boardgame_path(boardgame) %>
+              <% end %>
+              <% if policy(boardgame).destroy? %>
+                <%= link_to "Delete", boardgame, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <% end %>
           </div>
         </div>
       </div>
@@ -45,4 +51,6 @@
   </div>
 </div>
 
-<%= link_to 'New Boardgame', new_boardgame_path %>
+<% if policy(Boardgame).create? %>
+  <%= link_to "New Boardgame", new_boardgame_path %>
+<% end %>
