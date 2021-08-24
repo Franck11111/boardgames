@@ -1,6 +1,8 @@
 .banner {
+  display: flex;
   background-size: cover;
-  background-position: center;
+  background-position: 50%;
+  height: 100%;
   padding: 150px 0;
 }
 
@@ -18,4 +20,11 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+.container {
+  flex-grow: 1;
+}
+
+body, html {
+height: 100%;
 }
