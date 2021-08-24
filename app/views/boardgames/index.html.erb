@@ -19,12 +19,13 @@
     <% @boardgames.each do |boardgame| %>
       <div class="col-4">
         <div class="boardgame-card">
-          <div class="boardgame-card-image" style="background-image: url('<%= boardgame.picture_url %>')"></div>
+          <%# <% if boardgame.picture_url %>
+          <%# <div class="boardgame-card-image" style="background-image: url('<%= boardgame.picture_url %>
+          <%# <% end %>
           <div class="boardgame-card-content">
             <div class="boardgame-card-title">
               <h4><%= boardgame.title %></h4>
             </div>
-            <p><%= boardgame.address %></p>
             <div class="flex">
               <div class="flex">
                 <i class="material-icons mr-2">description</i><span><%= boardgame.description %></span>
@@ -33,9 +34,15 @@
                 <i class="material-icons mr-2">euro_symbol</i> <%= boardgame.price_per_day %>
               </div>
             </div>
+            <div>
+              <%= link_to 'Show', boardgame %>
+              <%= link_to 'Edit', edit_boardgame_path(boardgame) %>
+              <%= link_to 'Destroy', boardgame, method: :delete, data: { confirm: 'Are you sure?' } %>
           </div>
         </div>
       </div>
     <% end %>
   </div>
 </div>
+
+<%= link_to 'New Boardgame', new_boardgame_path %>
