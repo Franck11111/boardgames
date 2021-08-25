@@ -1,56 +1,46 @@
 <div class="container p-2">
 
- <div class="row">
- <h1>empty</h1>
- </div>
+  <h1>empty</h1>
 
-  <div class="row mt-3 amount">
-      <% if @query %>
-        <p>You searched for <strong><%= @query %></strong>. We found <%= @boardgames.count %> boardgames out of our <%= Boardgame.count %> on our website.</p>
-      <% else %>
-        <h1>All <strong> <%= Boardgame.count %> </strong> boardgames</h1>
-      <% end %>
-  </div>
-
-<div class="row cards">
-  <% @boardgames.each do |boardgame| %>
-  <div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-    <div class="card-trip">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg"/>
-      <div class="card-trip-infos">
-        <div>
-          <h2><%= boardgame.title %></h2>
-          <p><%= boardgame.description %></p>
-        </div>
-        <h2 class="card-trip-pricing">€<%= boardgame.price_per_day %></h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-      </div>
-    </div>
-    </div>
-      <div class="flip-card-back">
-        <% if policy(boardgame).show? %>
-          <%= link_to 'Book now!', boardgame, class: "btn btn-gradient" %>
-        <% end %>
-      </div>
-      </div>
-      <div>
-            <% if policy(boardgame).edit? %>
-              <%= link_to "Edit", edit_boardgame_path(boardgame) %>
-            <% end %>
-            <% if policy(boardgame).destroy? %>
-              <%= link_to "Delete", boardgame, method: :delete, data: { confirm: 'Are you sure?' } %>
-            <% end %>
-        </div>
-  </div>
-  <% end %>
-</div>
-
-  <div class="row">
-    <% if policy(Boardgame).create? %>
-      <a class="btn btn-gradient" href="<%= new_boardgame_path%>">New Boardgame</a>
+  <div class="mt-3 amount">
+    <% if @query %>
+      <p>You searched for <strong><%= @query %></strong>. We found <%= @boardgames.count %> boardgames out of our <%= Boardgame.count %> on our website.</p>
+    <% else %>
+      <h1>All <strong> <%= Boardgame.count %> </strong> boardgames</h1>
     <% end %>
   </div>
+
+  <div class="cards">
+    <div class="flip-card">
+      <% @boardgames.each do |boardgame| %>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="card-trip">
+                <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg"/>
+                <div class="card-trip-infos">
+                  <div>
+                    <h2><%= boardgame.title %></h2>
+                    <p><%= boardgame.description %></p>
+                  </div>
+                  <h2 class="card-trip-pricing">€<%= boardgame.price_per_day %></h2>
+                  <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <% if policy(boardgame).show? %>
+                  <%= link_to "See details", boardgame, {class: 'btn btn-gradient'} %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+    <% if policy(Boardgame).create? %>
+      <%= link_to "New Boardgame", new_boardgame_path, {class: 'btn btn-gradient-2'} %>
+    <% end %>
 
 </div>
