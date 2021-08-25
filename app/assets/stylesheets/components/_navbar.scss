@@ -13,12 +13,14 @@
   width: 200px;
 }
 
-.nav-link {
-  color: azure;
+.link-custom-color {
+  color: azure !important;
+  padding: 1em;
 }
 
 .navbar-lewagon-white {
   background-color: rgb(80, 79, 79);
+  color: azure !important;
 }
 
 #login_links {
