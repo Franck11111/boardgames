@@ -14,7 +14,7 @@
         <%= @boardgame.price_per_day %>
       </p>
 
-        <div class="game-picture" src="https://images.unsplash.com/photo-1522787345986-d5c7885a889e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1500&amp;q=80"></div>
+        <img class="game-picture" src="https://images.unsplash.com/photo-1522787345986-d5c7885a889e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1500&amp;q=80">
 
       <p>
         <strong>Description</strong>
@@ -25,19 +25,13 @@
           <%= link_to "Edit", edit_boardgame_path(@boardgame), {class: 'btn btn-edit'} %>
         <% end %>
         <% if policy(@boardgame).destroy? %>
-          <%= link_to "Delete", @boardgame, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to "Delete", @boardgame, class: 'btn btn-edit', method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>
 
-
+      <% if policy(Boardgame).create? %>
+         <a class="btn btn-edit" href="<%= new_boardgame_path%>">Book</a>
+       <% end %>
+        <br><br>
+       <%= link_to 'Back', boardgames_path %>
     </div>
   </div>
-
-
-
-<div class="container p-2">
-   <div class="row">
-     <% if policy(Boardgame).create? %>
-       <a class="btn btn-gradient" href="<%= new_boardgame_path%>">Book</a>
-     <% end %>
-  </div>
-</div>
