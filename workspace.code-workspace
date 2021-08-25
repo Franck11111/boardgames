@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../components"
+		}
+	],
+  "remoteAuthority": "wsl+Ubuntu",
+  "settings": {}
+}
