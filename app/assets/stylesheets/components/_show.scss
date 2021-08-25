@@ -6,5 +6,35 @@
 .game-picture{
   width: 500px;
   height: auto;
+}
+.btn-back {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 5px 15px;  border-radius: 50px;
+  font-weight: lighter;
+  transition: 0.3s ease;
+ }
 
+.btn-back:hover {
+  opacity: 1;
+}
+
+.btn-edit {
+  color: white;
+  padding: 5px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(#167FFB, #0F60C4);
+  border: 1px solid #0FC42D;
+  transition: 0.5s ease;
+}
+
+
+.btn-edit:hover {
+  background: linear-gradient(#14FF3B, #0FDA0F);
+  color: white;
+}
+
+.show-game {
+  padding: 30px;
 }
