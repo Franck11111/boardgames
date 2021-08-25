@@ -30,13 +30,12 @@
     </div>
     </div>
       <div class="flip-card-back">
-        <a class="btn btn-gradient" href="#">Book now!</a>
+        <% if policy(boardgame).show? %>
+          <%= link_to 'Book now!', boardgame, class: "btn btn-gradient" %>
+        <% end %>
       </div>
       </div>
       <div>
-            <% if policy(boardgame).show? %>
-              <%= link_to "Show", boardgame %>
-            <% end %>
             <% if policy(boardgame).edit? %>
               <%= link_to "Edit", edit_boardgame_path(boardgame) %>
             <% end %>
