@@ -1,22 +1,40 @@
-<p>
-  <strong>Name:</strong>
-  <%= @boardgame.title %>
-</p>
 
-<p>
-  <strong>User:</strong>
-  <%= @boardgame.user_id %>
-</p>
+<div class="show-game">
 
-<p>
-  <strong>Description:</strong>
-  <%= @boardgame.description %>
-</p>
+  <div class="container p-2">
 
-<p>
-  <strong>Price:</strong>
-  <%= @boardgame.price_per_day %>
-</p>
+    </br></br></br></br>
+      <div class="game-title">
+        <strong></strong>
+        <%= @boardgame.title %>
+      </div>
 
-<%= link_to 'Edit', edit_boardgame_path(@boardgame) %> |
-<%= link_to 'Back', boardgames_path %>
+      <p>
+        <strong>Price</strong>
+        <%= @boardgame.price_per_day %>
+      </p>
+  </div>
+</br></br>
+
+  <div class="game-picture" src="https://images.unsplash.com/photo-1522787345986-d5c7885a889e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1500&amp;q=80"></div>
+  <div class="description-show">
+    <p>
+      <strong>Description</strong>
+      <%= @boardgame.description %>
+    </p>
+  </div>
+
+</br>
+    <%= link_to 'Edit', edit_boardgame_path(@boardgame), class:"btn btn-light" %>
+    <%= link_to 'Back', boardgames_path %>
+  </div>
+  <p>
+</div>
+
+<div class="container p-2">
+   <div class="row">
+     <% if policy(Boardgame).create? %>
+       <a class="btn btn-gradient" href="<%= new_boardgame_path%>">Book</a>
+     <% end %>
+  </div>
+</div>
