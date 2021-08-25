@@ -21,17 +21,18 @@
       <%= @boardgame.description %>
      </p>
 
+     <% if policy(@boardgame).edit? %>
+          <%= link_to "Edit", edit_boardgame_path(@boardgame), {class: 'btn btn-edit'} %>
+        <% end %>
+        <% if policy(@boardgame).destroy? %>
+          <%= link_to "Delete", @boardgame, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+
 
     </div>
   </div>
 
-  <div class="buttons-show">
-    <%= link_to 'Edit', edit_boardgame_path(@boardgame), class:"btn btn-edit" %>
-    <%= link_to 'Back', boardgames_path, class:"btn btn-back"%>
-  </div>
-  </div>
-  <p>
-</div>
+
 
 <div class="container p-2">
    <div class="row">
