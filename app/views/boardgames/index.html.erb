@@ -11,12 +11,13 @@
   </div>
 
   <div class="cards">
-    <% @boardgames.each do |boardgame| %>
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <div class="card-trip">
-              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg"/>
+    <div class="flip-card">
+      <% @boardgames.each do |boardgame| %>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="card-trip">
+                <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg"/>
                 <div class="card-trip-infos">
                   <div>
                     <h2><%= boardgame.title %></h2>
@@ -26,21 +27,20 @@
                   <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
                 </div>
               </div>
-            </div>
-            <div class="flip-card-back">
-              <% if policy(boardgame).show? %>
-                <%= link_to "See details", boardgame, {class: 'btn btn-gradient'} %>
-              <% end %>
+              <div class="flip-card-back">
+                <% if policy(boardgame).show? %>
+                  <%= link_to "See details", boardgame, {class: 'btn btn-gradient'} %>
+                <% end %>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-    <% end %>
+      <% end %>
+    </div>
   </div>
 
-  <% if policy(Boardgame).create? %>
-    <%= link_to "New Boardgame", new_boardgame_path, {class: 'btn btn-gradient'} %>
-  <% end %>
+    <% if policy(Boardgame).create? %>
+      <%= link_to "New Boardgame", new_boardgame_path, {class: 'btn btn-gradient-2'} %>
+    <% end %>
 
 </div>
