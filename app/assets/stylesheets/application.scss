@@ -12,10 +12,7 @@
 @import "components/index";
 @import "pages/index";
 
-// general CSS rules
-@mixin centerer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+//generic CSS
+body {
+  padding-top: 100px;
 }
