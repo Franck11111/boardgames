@@ -23,10 +23,9 @@
 }
 
 .container {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .amount h1 {
@@ -36,7 +35,7 @@
 
 .cards {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
 }
 
