@@ -1,3 +1,24 @@
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards-index {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards-index {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards-index {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 .card-trip {
   overflow: hidden;
   background: white;
@@ -35,4 +56,10 @@
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.cards-index {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
 }
