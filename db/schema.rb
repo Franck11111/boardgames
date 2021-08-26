@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_25_091154) do
+ActiveRecord::Schema.define(version: 2021_08_25_213132) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,11 @@ ActiveRecord::Schema.define(version: 2021_08_25_091154) do
     t.integer "price_per_day"
     t.bigint "user_id", null: false
     t.string "cover_url"
+    t.text "desc_short"
+    t.integer "minplayers"
+    t.integer "maxplayers"
+    t.integer "playingtime"
+    t.integer "minage"
     t.index ["user_id"], name: "index_boardgames_on_user_id"
   end
 
