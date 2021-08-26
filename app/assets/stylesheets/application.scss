@@ -10,7 +10,9 @@
 
 // Your CSS partials
 @import "components/index";
+
 @import "pages/index";
+// 👉 should @import "pages" be added?
 
 //generic CSS
 body {

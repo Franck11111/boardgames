@@ -13,7 +13,7 @@
     <%= link_to "New Boardgame", new_boardgame_path, {class: 'btn btn-gradient mb-5'} %>
   <% end %>
 
-  <div class="cards">
+  <div class="cards-index">
     <% @boardgames.each do |boardgame| %>
       <% if policy(boardgame).show? %>
         <%= link_to boardgame do %>
