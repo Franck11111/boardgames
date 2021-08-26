@@ -14,6 +14,14 @@
       <p><strong>Playingtime:</strong> <%= @boardgame.playingtime %> min</p>
     </div>
 
+    <div class="mt-2 pr-3 content">
+      <p><strong>Min. age:</strong> <%= @boardgame.minage %></p>
+    </div>
+
+    <div class="mt-2 pr-3 content">
+      <p><strong>Min. players:</strong> <%= @boardgame.minplayers %> <strong>Max. players:</strong> <%= @boardgame.maxplayers %></p>
+    </div>
+
     <div>
     <% if policy(Boardgame).create? %>
       <%= link_to "Book", new_boardgame_path, class:'btn btn-gradient' %>
