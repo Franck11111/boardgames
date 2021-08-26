@@ -13,6 +13,31 @@
 @import "pages/index";
 
 //generic CSS
+
+//came from footer tutorial
+* {
+ box-sizing: border-box;
+}
+*:before,
+*:after {
+ box-sizing: border-box;
+}
+html,
+body {
+ height: 100%;
+ position: relative;
+}
+
+.main-container {
+ min-height: 100vh; /* will cover the 100% of viewport */
+ overflow: hidden;
+ display: block;
+ position: relative;
+ padding-bottom: 100px; /* height of your footer */
+}
+
+//---------
+
 body {
   padding-top: 100px;
   background-color: white;
