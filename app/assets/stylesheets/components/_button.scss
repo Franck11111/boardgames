@@ -38,5 +38,7 @@
 
 .btn-gradient:hover {
   background: linear-gradient($orange, $yellow);
-  color: white;
+  padding: 9px 25px;
+  border: 1px solid dark;
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.4);
 }
