@@ -1,4 +1,70 @@
 .margin-custom {
-width: 80vw;
-
+  width: 80vw;
 }
+// login form
+  .login-container {
+    display:flex;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .login-form {
+    width: 800px;
+    border-radius: 5px;
+    border-color: $red;
+    border-width: thin;
+    border-style: solid;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    background-color: $yellow;
+    padding: 20px;
+  }
+
+  .devise-links-login {
+    display:inline-flex;
+  }
+
+  .login-form a{
+    color: $white !important;
+    padding-right: 20px;
+    padding-top: 15px;
+  }
+
+  .login-form a:hover {
+    color: $white !important;
+    text-decoration: none;
+  }
+
+  .login-container label{
+    color:$white;
+  }
+
+  h1 {
+    color: $white;
+  }
+
+  .user_remember_me{
+  margin-left: 5px;
+  }
+
+
+// Boardgame add form
+  .boardgame-add-form_container{
+  display:flex;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .boardgame-add-form {
+    width: 800px;
+    border-radius: 5px;
+    border-color: $red;
+    border-width: thin;
+    border-style: solid;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    background-color: $yellow;
+    padding: 20px;
+  }
+
+  .boardgame-add-form_container label{
+    color:$white;
+  }
