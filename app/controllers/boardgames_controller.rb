@@ -11,6 +11,17 @@ class BoardgamesController < ApplicationController
       # @boardgames = boardgames.all
       @boardgames = policy_scope(Boardgame)
     end
+
+    # the `geocoded` scope filters only boardgames with coordinates (latitude & longitude)
+    @markers = @boardgames.geocoded.map do |boardgame|
+      {
+        lat: boardgame.latitude,
+        lng: boardgame.longitude,
+        # to pass more info about our boardgames in our view
+        info_window: render_to_string(partial: "info_window", locals: { boardgame: boardgame }),
+        image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
+      }
+    end
   end
 
   def show
