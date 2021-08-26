@@ -11,16 +11,19 @@
 
   <div class="text-center">
   <% if policy(Boardgame).create? %>
-      <%= link_to "New Boardgame", new_boardgame_path, {class: 'btn btn-gradient-2 mb-5'} %>
+      <%= link_to "New Boardgame", new_boardgame_path, {class: 'btn btn-gradient mb-5 mt-5'} %>
     <% end %>
   </div>
 
-  <div class="cards-index">
+  <div class="cards-index mb-5">
     <% @boardgames.each do |boardgame| %>
       <% if policy(boardgame).show? %>
         <%= link_to boardgame do %>
           <div class="card-trip">
-            <img src= "<%= boardgame.cover_url %>" />
+            <div class="image-card">
+              <img src= "<%= boardgame.cover_url %>" class="image"/>
+              <div class="button-card">See details</div>
+            </div>
             <div class="card-trip-infos">
               <div>
                 <h2><%= boardgame.title %></h2>

@@ -25,7 +25,7 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.card-trip > img {
+.card-trip .img {
   height: 200px;
   width: 100%;
   object-fit: cover;
@@ -62,4 +62,31 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.card-trip:hover .image {
+  opacity: 0.3;
+}
+
+.image-card {
+  position: relative;
+}
+
+.image-card:hover .button-card {
+  background-color: #04aa6d;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  position: absolute;
+  left: 15%;
+  top: 50%;
 }
