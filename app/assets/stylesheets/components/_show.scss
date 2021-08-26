@@ -25,13 +25,14 @@
   border-radius: 4px;
   font-weight: bold;
   background: linear-gradient(#167FFB, #0F60C4);
-  border: 1px solid #0FC42D;
+  border: 1px solid #0F60C4;
+
   transition: 0.5s ease;
 }
 
 
 .btn-edit:hover {
-  background: linear-gradient(#14FF3B, #0FDA0F);
+  background: linear-gradient(#147EFF, #0F67DA);
   color: white;
 }
 

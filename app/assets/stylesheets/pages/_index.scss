@@ -56,7 +56,7 @@
 }
 
 .btn-1:hover {
-   opacity: 1;
+  opacity: 1;
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -112,13 +112,13 @@
   padding: 8px 24px;
   border-radius: 4px;
   font-weight: bold;
-  background: linear-gradient(#167ffb, #0f60c4);
+  background: linear-gradient($orange, $yellow);
   transition: background 0.3s ease;
-  border: 1px solid #0f60c4;
+  border: 1px solid $orange;
   margin-top: 7rem;
 }
 
 .btn-gradient:hover {
-  background: linear-gradient(#147eff, #0f67da);
+  background: linear-gradient($orange, $yellow);
   color: white;
 }
