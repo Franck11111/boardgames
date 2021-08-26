@@ -1,11 +1,9 @@
-
-
 <div class="container">
   <div class="row">
     <div class="col">
         <div class="d-flex flex-column justify-content-center">
           <div class="main_image"> <img src="https://images.unsplash.com/photo-1522787345986-d5c7885a889e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1500&amp;q=80" id="main_product_image" width="350"> </div>
-          </div>
+        </div>
     </div>
     <div class="col">
         <div class="p-3 right-side">
@@ -19,18 +17,22 @@
 
             <div class="buttons d-flex flex-row mt-5 gap-3">
               <button class="btn btn-outline-dark">
-                                <% if policy(Boardgame).create? %>
-                                 <a <%= new_boardgame_path%>>Book</a>
-                                <% end %>
-                      </button>
-                      <button class="btn btn-dark">
-                              <% if policy(@boardgame).edit? %>
-                              <%= link_to "Edit", edit_boardgame_path(@boardgame) %>
-                              <% end %>
-                      </button>
-                      <button class="btn btn-dark">
-                              <% if policy(@boardgame).destroy? %>
-                              <%= link_to "Delete", @boardgame, method: :delete, data: { confirm: 'Are you sure?' } %>
-                              <% end %>
+                  <% if policy(Boardgame).create? %>
+                    <a <%= new_boardgame_path%>>Book</a>
+                  <% end %>
+            </div>
+            </button>
+              <button class="btn btn-dark">
+                <% if policy(@boardgame).edit? %>
+                  <%= link_to "Edit", edit_boardgame_path(@boardgame) %>
+                <% end %>
+              </button>
+              <button class="btn btn-dark">
+                <% if policy(@boardgame).destroy? %>
+                  <%= link_to "Delete", @boardgame, method: :delete, data: { confirm: 'Are you sure?' } %>
+                <% end %>
+          </div>
+        </div>
     </div>
   </div>
+</div>
