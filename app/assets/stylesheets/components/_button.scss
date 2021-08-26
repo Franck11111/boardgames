@@ -1,7 +1,6 @@
-
 .btn-ghost {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
+  color: #4a4a4a;
+  border: 1px solid #4a4a4a;
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
@@ -17,15 +16,16 @@
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #1EDD88;
+  background: #1edd88;
   transition: background 0.3s ease;
 }
 
 .btn-flat:hover {
-  background: #1BCB7F;
+  background: #1bcb7f;
   color: white;
 }
 
+//btn-gradient
 .btn-gradient {
   color: white;
   padding: 8px 24px;
@@ -37,6 +37,23 @@
 }
 
 .btn-gradient:hover {
+  background: linear-gradient($orange, $yellow);
+  color: white;
+}
+
+//btn-gradient-2
+.btn-gradient-2 {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient($orange, $yellow);
+  transition: background 0.3s ease;
+  border: 1px solid $orange;
+  margin-top: 7rem;
+}
+
+.btn-gradient-2:hover {
   background: linear-gradient($orange, $yellow);
   color: white;
 }
