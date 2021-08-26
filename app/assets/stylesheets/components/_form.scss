@@ -8,18 +8,15 @@
 }
 
 .login-form {
-  display: inline-flex;
+  width: 500px;
   border-radius: 5px;
   border-color: $red;
-  border-
+  border-width: thin;
+  border-style: solid;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   background-color: $orange;
   padding: 20px;
   }
-
-.login-form .form-inputs{
-  width: 90%;
-}
 
 .new_user {
 

@@ -42,3 +42,13 @@
   border: 1px solid dark;
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.4);
 }
+
+btn-red {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient($orange, $yellow);
+  transition: background 0.3s ease;
+  border: 1px solid $orange;
+}
