@@ -1,39 +1,41 @@
 <div class="container">
   <div class="row">
-         <img class="img-fluid col-4" src="<%= @boardgame.cover_url %>">
+         <img class="col-4 p-3" id="img-show" src="<%= @boardgame.cover_url %>">
     <div class="col-8">
-      <div class="p-3 right-side">
+      <div class="pt-3 right-side">
         <div class="d-flex justify-content-between align-items-center">
-          <h3><%= @boardgame.title %></h3>
+          <h1><%= @boardgame.title %></h1>
+        </div>
     </div>
     <h3><%= @boardgame.price_per_day %>€</h3>
     <div class="mt-2 pr-3 content">
       <p><%= @boardgame.description %></p>
     </div>
+
     <div class="mt-2 pr-3 content">
-      <p><strong>Playingtime:</strong> <%= @boardgame.playingtime %> min</p>
+      <p> <strong>Players</strong> <%= @boardgame.minplayers %> - <%= @boardgame.maxplayers %> </p>
     </div>
 
     <div class="mt-2 pr-3 content">
-      <p><strong>Min. age:</strong> <%= @boardgame.minage %></p>
+      <p> <strong>Playing Time</strong> <%= @boardgame.playingtime %> Min</p>
     </div>
 
     <div class="mt-2 pr-3 content">
-      <p><strong>Min. players:</strong> <%= @boardgame.minplayers %> <strong>Max. players:</strong> <%= @boardgame.maxplayers %></p>
+      <p><strong>Age:</strong> <%= @boardgame.minage %></p>
     </div>
 
     <div>
     <% if policy(Boardgame).create? %>
-      <%= link_to "Book", new_boardgame_booking_path(@boardgame), class:'btn btn-gradient' %>
+      <%= link_to "Book Game", new_boardgame_booking_path(@boardgame), class:'btn btn-gradient' %>
     <% end %>
     </div>
       <br>
         <div>
           <% if policy(@boardgame).edit? %>
-            <%= link_to "Edit", edit_boardgame_path(@boardgame), class:'btn btn-gradient' %>
+            <%= link_to "Edit", edit_boardgame_path(@boardgame), class:'btn btn-light btn-sm' %>
           <% end %>
           <% if policy(@boardgame).destroy? %>
-            <%= link_to "Delete", @boardgame, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-gradient' %>
+            <%= link_to "Delete", @boardgame, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn-light btn-sm' %>
           <% end %>
         </div>
       </div>
