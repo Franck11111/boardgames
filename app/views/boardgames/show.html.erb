@@ -24,7 +24,7 @@
 
     <div>
     <% if policy(Boardgame).create? %>
-      <%= link_to "Book", new_boardgame_path, class:'btn btn-gradient' %>
+      <%= link_to "Book", new_boardgame_booking_path(@boardgame), class:'btn btn-gradient' %>
     <% end %>
     </div>
       <br>
