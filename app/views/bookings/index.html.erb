@@ -1,0 +1,24 @@
+<table class="container-bookings" id="show-table">
+  <thead>
+    <tr>
+      <th><h2>Game</h2></th>
+      <th><h2>User first name</h2></th>
+      <th><h2>User last name</h2></th>
+      <th><h2>Start date</h2></th>
+      <th><h2>End date</h2></th>
+      <th colspan="6"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @boardgame.bookings.each do |booking| %>
+      <tr>
+        <td><strong><%= booking.boardgame.title %></strong></td>
+        <td><strong><%= booking.user.first_name %></strong></td>
+        <td><strong><%= booking.user.last_name %></strong></td>
+        <td><%= booking.start_date %></td>
+        <td><%= booking.end_date %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
