@@ -1,6 +1,7 @@
+
 <div class="container p-2">
 
-  <div class="mt-3 amount">
+  <div class="mt-3 text-center">
     <% if @query %>
       <p>You searched for <strong><%= @query %></strong>. We found <%= @boardgames.count %> boardgames out of our <%= Boardgame.count %> on our website.</p>
     <% else %>
@@ -8,16 +9,18 @@
     <% end %>
   </div>
 
- <% if policy(Boardgame).create? %>
-    <%= link_to "New Boardgame", new_boardgame_path, {class: 'btn btn-gradient mb-5'} %>
-  <% end %>
+  <div class="text-center">
+  <% if policy(Boardgame).create? %>
+      <%= link_to "New Boardgame", new_boardgame_path, {class: 'btn btn-gradient-2 mb-5'} %>
+    <% end %>
+  </div>
 
-  <div class="cards">
+  <div class="cards-index">
     <% @boardgames.each do |boardgame| %>
       <% if policy(boardgame).show? %>
         <%= link_to boardgame do %>
           <div class="card-trip">
-            <img src="https://cf.geekdo-images.com/sZYp_3BTDGjh2unaZfZmuA__original/img/7d-lj5Gd1e8PFnD97LYFah2c45M=/0x0/filters:format(jpeg)/pic2437871.jpg" />
+            <img src= "<%= boardgame.cover_url %>" />
             <div class="card-trip-infos">
               <div>
                 <h2><%= boardgame.title %></h2>
