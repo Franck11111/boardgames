@@ -34,6 +34,7 @@
   background: linear-gradient($orange, $yellow);
   transition: background 0.3s ease;
   border: 1px solid $orange;
+  text-decoration: none;
 }
 
 .btn-gradient:hover {
@@ -58,4 +59,27 @@
 .btn-gradient-2:hover {
   background: linear-gradient($orange, $yellow);
   color: white;
+}
+
+.btn-yellow {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 8px;
+  background-color: $orange;
+  font-weight: bold;
+  border: 1px solid $orange;
+}
+.btn-yellow:hover {
+  color: $white;
+  padding: 8px 24px;
+  border-radius: 8px;
+  background-color: $orange;
+  font-weight: bold;
+  border: 1px solid $red;
+}
+
+.fa-arrow-alt-circle-left{
+font-size: 40px;
+color: $orange;
+padding: 10px
 }
