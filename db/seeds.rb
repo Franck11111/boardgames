@@ -18,6 +18,7 @@ User.create([
   {email: "testi4@gmail.com", password: "testtest", password_confirmation: "testtest", first_name: "", last_name: "V"},
   {email: "testi5@gmail.com", password: "testtest", password_confirmation: "testtest", first_name: "", last_name: "V"},
   {email: "test@gmail.com", password: "testtest", password_confirmation: "testtest" },
+  {email: "greg@gmail.com", password: "testtest", password_confirmation: "testtest" },
   {email: "Indira@gmail.com", password: "testtest", password_confirmation: "testtest", first_name: "Indira", last_name: "V"}
   ])
     puts "Total users added #{User.count}"
