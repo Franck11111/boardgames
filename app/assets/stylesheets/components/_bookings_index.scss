@@ -1,0 +1,25 @@
+.title-bookings {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+#show-table {
+  min-width: 350px;
+}
+
+#show-table th, td {
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+  text-align: left;
+}
+
+#show-table td {
+  text-align: left;
+}
+
+#show-table tr:hover {background-color: $orange;}
+
+#show-table th {
+  background-color: $orange;
+  color: white;
+}
