@@ -1,5 +1,13 @@
-<h2><%= boardgame.title %></h2>
-<p><%= boardgame.address %></p>
-<p><%= boardgame.price_per_day %></p>
-<p> Picture placeholder</p>
-<%# <p><%= image_url: helpers.asset_url(boardgame.cover_url)</p> %>
+<style>
+  div p {
+    text-align: left;
+  }
+</style>
+
+<div>
+  <h2> <%= link_to boardgame.title, boardgame %></h2>
+  <p><strong>Address: </strong><%= boardgame.address %></p>
+  <p><strong>Price per day:</strong> €<%= boardgame.price_per_day %></p>
+  <p> Picture placeholder</p>
+  <%# <p><%= image_url: helpers.asset_url(boardgame.cover_url)</p> %>
+</div>
