@@ -6,7 +6,7 @@
       <% if @query %>
         <p>You searched for <strong><%= @query %></strong>. We found <%= @boardgames.count %> boardgames out of our <%= Boardgame.count %> on our website.</p>
       <% else %>
-        <h1><strong> <%= Boardgame.count %> </strong> boardgames in the area</h1>
+        <h1><strong> <%= Boardgame.count %> </strong> boardgames in <u>San Francisco</u></h1>
       <% end %>
 
     <div class="blok-2">
