@@ -25,7 +25,7 @@ class BoardgamesController < ApplicationController
 
   def show
     authorize @boardgame
-
+    @markers = [{ lat: @boardgame.latitude, lng: @boardgame.longitude }]
   end
 
   # GET /boardgames/new
