@@ -51,7 +51,7 @@
   border: 1px solid $orange;
   padding: 8px 24px;
   border-radius: 50px;
-  font-weight: lighter;
+  // font-weight: lighter;
   transition: opacity 0.3s ease;
   visibility: hidden;
   text-decoration: none;
@@ -94,4 +94,6 @@
   font-size: 40px;
   color: $orange;
   padding: 10px;
+  position: sticky;
+  top: 0px;
 }
