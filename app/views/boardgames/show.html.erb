@@ -6,7 +6,11 @@
   <div>
     <div class="row">
       <% if @boardgame.photo.attached? %>
+<<<<<<< HEAD
         <%= cl_image_tag @boardgame.photo.key, class: "col-4 p-3", id: "img-show", height: 300, width: 400, crop: :fill %>
+=======
+        <%= cl_image_tag @boardgame.photo.key, height: 300, width: 400 %>
+>>>>>>> master
       <% else %>
         <img class="col-4 p-3" id="img-show" src="<%= @boardgame.cover_url %>">
       <% end %>
