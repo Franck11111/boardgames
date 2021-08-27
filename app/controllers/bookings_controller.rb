@@ -2,7 +2,13 @@ class BookingsController < ApplicationController
   def index
     # @user = User.find(params[:user_id])
     # @booking.user = current_user
-    @bookings = Booking.where(user_id: current_user)
+    @bookings = policy_scope(Booking)
+    @bookings = Booking.where(user: current_user)
+    @host = current_user.boardgames.any?
+    if @host
+      @my_boardgames = current_user.boardgames
+      @bookings_on_my_boardgames = Booking.where(boardgame_id: @my_boardgames.pluck(:id))
+    end
   end
 
   def new

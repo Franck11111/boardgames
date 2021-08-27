@@ -1,17 +1,18 @@
-<h1>Your bookings</h1>
+<div class="title-bookings">
+  <h1>Your<strong> <%= Booking.count %> </strong> bookings</h1>
+</div>
 
-<table class="container-bookings" id="show-table">
+<table class="container" id="show-table">
   <thead>
     <tr>
-      <th><h2>Game</h2></th>
-      <th><h2>Start date</h2></th>
-      <th><h2>End date</h2></th>
-      <th colspan="4"></th>
+      <th><h2>Games booked</h2></th>
+      <th><h2>From</h2></th>
+      <th><h2>To</h2></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @user.bookings.each do |booking| %>
+    <% @bookings.each do |booking| %>
       <tr>
         <td><strong><%= booking.boardgame.title %></strong></td>
         <td><%= booking.start_date %></td>
