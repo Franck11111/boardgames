@@ -1,7 +1,5 @@
 class BookingsController < ApplicationController
   def index
-    # @user = User.find(params[:user_id])
-    # @booking.user = current_user
     @bookings = policy_scope(Booking)
     @bookings = Booking.where(user: current_user)
     @host = current_user.boardgames.any?

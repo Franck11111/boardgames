@@ -1,6 +1,14 @@
 <div class="title-bookings">
-  <h1>Your<strong> <%= Booking.count %> </strong> bookings</h1>
+  <% if @bookings.count==1 %>
+        <h1>Your booking</h1>
+      <% else %>
+        <h1>Your<strong> <%= @bookings.count %> </strong> bookings</h1>
+      <% end %>
 </div>
+
+<%= link_to boardgames_path, class: "back_action" do %>
+  <i class="fas fa-arrow-alt-circle-left"></i>
+<% end %>
 
 <table class="container" id="show-table">
   <thead>

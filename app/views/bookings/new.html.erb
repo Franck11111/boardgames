@@ -1,3 +1,7 @@
+<%= link_to boardgame_path(@boardgame), class: "back_action" do %>
+  <i class="fas fa-arrow-alt-circle-left"></i>
+<% end %>
+
 <%= simple_form_for [@boardgame, @booking] do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
