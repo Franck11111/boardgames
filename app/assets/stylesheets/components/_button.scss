@@ -44,6 +44,18 @@
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
+//btn-gradient-card
+.btn-gradient-card {
+  color: $white;
+  background: linear-gradient($orange, $yellow);
+  border: 1px solid $orange;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  transition: opacity 0.3s ease;
+  visibility: hidden;
+  text-decoration: none;
+}
 //btn-gradient-2
 .btn-gradient-2 {
   color: white;
@@ -78,8 +90,8 @@
   border: 1px solid $red;
 }
 
-.fa-arrow-alt-circle-left{
-font-size: 40px;
-color: $orange;
-padding: 10px
+.fa-arrow-alt-circle-left {
+  font-size: 40px;
+  color: $orange;
+  padding: 10px;
 }
