@@ -1,4 +1,4 @@
-<div class="form-container">
+<div class="form-container mb-5">
   <div class="form-styled">
     <h1>Add game</h1>
     <%= simple_form_for(@boardgame) do |f| %>
@@ -9,7 +9,11 @@
       <%= f.input :title %>
       <%= f.input :description %>
       <%= f.input :price_per_day %>
-      <%= f.input :price_per_day %>
+      <%= f.input :minplayers %>
+      <%= f.input :maxplayers %>
+      <%= f.input :playingtime %>
+      <%= f.input :minage %>
+      <%= f.input :address %>
       <%= f.input :photo, as: :file %>
     </div>
 
