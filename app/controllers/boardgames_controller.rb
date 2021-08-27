@@ -25,6 +25,7 @@ class BoardgamesController < ApplicationController
 
   def show
     authorize @boardgame
+
   end
 
   # GET /boardgames/new
