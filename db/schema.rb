@@ -49,6 +49,9 @@ ActiveRecord::Schema.define(version: 2021_08_26_143616) do
     t.integer "maxplayers"
     t.integer "playingtime"
     t.integer "minage"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "address"
     t.index ["user_id"], name: "index_boardgames_on_user_id"
   end
 

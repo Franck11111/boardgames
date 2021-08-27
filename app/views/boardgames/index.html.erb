@@ -1,41 +1,46 @@
 
-<div class="container p-2">
+<div class="text-center mt-3">
 
-  <div class="mt-3 text-center">
-    <% if @query %>
-      <p>You searched for <strong><%= @query %></strong>. We found <%= @boardgames.count %> boardgames out of our <%= Boardgame.count %> on our website.</p>
-    <% else %>
-      <h1>All <strong> <%= Boardgame.count %> </strong> boardgames</h1>
-    <% end %>
-  </div>
 
-  <div class="text-center">
-  <% if policy(Boardgame).create? %>
-      <%= link_to "New Boardgame", new_boardgame_path, {class: 'btn btn-gradient mb-5 mt-5'} %>
-    <% end %>
-  </div>
-
-  <div class="cards-index mb-5">
-    <% @boardgames.each do |boardgame| %>
-      <% if policy(boardgame).show? %>
-        <%= link_to boardgame do %>
-          <div class="card-trip">
-            <div class="image-card">
-              <img src= "<%= boardgame.cover_url %>" class="image"/>
-              <div class="button-card">See details</div>
-            </div>
-            <div class="card-trip-infos">
-              <div>
-                <h2><%= boardgame.title %></h2>
-              </div>
-              <h2 class="card-trip-pricing">€<%= boardgame.price_per_day %></h2>
-            </div>
-          </div>
-        <% end %>
+    <div class="blok-1">
+      <% if @query %>
+        <p>You searched for <strong><%= @query %></strong>. We found <%= @boardgames.count %> boardgames out of our <%= Boardgame.count %> on our website.</p>
+      <% else %>
+        <h1><strong> <%= Boardgame.count %> </strong> boardgames in the area</h1>
       <% end %>
-    <% end %>
+
+    <div class="blok-2">
+    <% if policy(Boardgame).create? %>
+        <%= link_to "New Boardgame", new_boardgame_path, {class: 'btn btn-gradient mb-5 mt-5'} %>
+      <% end %>
+    </div>
   </div>
 
+  <div class="map-cards-container">
 
+    <div class="cards-index mb-5">
+      <% @boardgames.each do |boardgame| %>
+        <div class="card-trip">
+          <div class="image-card">
+            <% if policy(boardgame).show? %>
+              <%= link_to boardgame do %>
+                <img src= "<%= boardgame.cover_url %>" class="image"/>
+                <div class="btn-gradient-card">See details</div>
+              <% end %>
+            <% end %>
+          </div>
+          <div class="card-trip-infos">
+            <h2><%= boardgame.title %></h2>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div id="map"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+
+  </div>
 
 </div>

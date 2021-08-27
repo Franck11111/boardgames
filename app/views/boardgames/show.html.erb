@@ -13,11 +13,11 @@
     </div>
 
     <div class="mt-2 pr-3 content">
-      <p> <strong>Players</strong> <%= @boardgame.minplayers %> - <%= @boardgame.maxplayers %> </p>
+      <p> <strong>Players:</strong> <%= @boardgame.minplayers %> - <%= @boardgame.maxplayers %> </p>
     </div>
 
     <div class="mt-2 pr-3 content">
-      <p> <strong>Playing Time</strong> <%= @boardgame.playingtime %> Min</p>
+      <p> <strong>Playing Time:</strong> <%= @boardgame.playingtime %> Min</p>
     </div>
 
     <div class="mt-2 pr-3 content">
@@ -38,7 +38,7 @@
             <%= link_to "Delete", @boardgame, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn-light btn-sm' %>
           <% end %>
         </div>
-      </div>
+
     </div>
   </div>
 </div>
