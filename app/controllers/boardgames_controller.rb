@@ -18,8 +18,7 @@ class BoardgamesController < ApplicationController
         lat: boardgame.latitude,
         lng: boardgame.longitude,
         # to pass more info about our boardgames in our view
-        info_window: render_to_string(partial: "info_window", locals: { boardgame: boardgame }),
-        image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
+        info_window: render_to_string(partial: "info_window", locals: { boardgame: boardgame })
       }
     end
   end
