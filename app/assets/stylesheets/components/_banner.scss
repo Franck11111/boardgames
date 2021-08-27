@@ -9,24 +9,27 @@
 .banner h1 {
   margin: 0;
   color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   font-size: 60px;
   font-weight: bold;
   padding: 20px 0;
-  font-family: "Work Sans", "Helvetica", "sans-serif";
+  font-family: "Arvo", serif;
+  // font-family: "Work Sans", "Helvetica", "sans-serif";
 }
 
 .banner p {
   font-size: 40px;
   color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-family: "Work Sans", "Helvetica", "sans-serif";
+  opacity: 0.7;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-family: "Nunito", "Helvetica", "sans-serif";
+  // font-family: "Work Sans", "Helvetica", "sans-serif";
 }
 .container {
   flex-grow: 1;
 }
 
-body, html {
+body,
+html {
   height: 100%;
 }
