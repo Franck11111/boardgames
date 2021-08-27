@@ -1,7 +1,12 @@
 <div class="container">
   <div>
     <div class="row">
-          <img class="col-4 p-3" id="img-show" src="<%= @boardgame.cover_url %>">
+      <% if @boardgame.photo.attached? %>
+        <%= cl_image_tag @boardgame.photo.key, height: 300, width: 400, crop: :fill %>
+      <% else %>
+        <img class="col-4 p-3" id="img-show" src="<%= @boardgame.cover_url %>">
+      <% end %>
+
       <div class="col-8">
         <div class="pt-3 right-side">
           <div class="d-flex justify-content-between align-items-center">
@@ -45,12 +50,14 @@
   </div>
 
 
+
+
   <div>
     <p> Here is your game </p>
-      <div id="map-show"
+    <div id="map-show"
         data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-      </div>
+    </div>
 
   </div>
 
