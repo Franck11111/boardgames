@@ -24,7 +24,11 @@
           <div class="image-card">
             <% if policy(boardgame).show? %>
               <%= link_to boardgame do %>
-                <img src= "<%= boardgame.cover_url %>" class="image"/>
+                <% if boardgame.photo.attached? %>
+                  <%= cl_image_tag boardgame.photo.key, {class: 'image'}%>
+                <% else %>
+                  <img src="<%= boardgame.cover_url %>" class="image">
+                <% end %>
                 <div class="btn-gradient-card">See details</div>
               <% end %>
             <% end %>

@@ -6,7 +6,7 @@
   <div>
     <div class="row">
       <% if @boardgame.photo.attached? %>
-        <%= cl_image_tag @boardgame.photo.key, height: 300, width: 400, crop: :fill %>
+        <%= cl_image_tag @boardgame.photo.key, height: 300, width: 400 %>
       <% else %>
         <img class="col-4 p-3" id="img-show" src="<%= @boardgame.cover_url %>">
       <% end %>
