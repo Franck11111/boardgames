@@ -1,20 +1,24 @@
 <%= link_to boardgame_path(@boardgame), class: "back_action" do %>
   <i class="fas fa-arrow-alt-circle-left"></i>
 <% end %>
+<h1>Add Booking</h1>
+<div class="form-container">
+  <div class="form-styled">
+  <%= simple_form_for [@boardgame, @booking] do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-<%= simple_form_for [@boardgame, @booking] do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    <div class="form-inputs">
+      <%= f.input :start_date %>
+    </div>
 
-  <div class="form-inputs">
-    <%= f.input :start_date %>
+    <div class="form-inputs">
+      <%= f.input :end_date %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Add", class: "btn btn-yellow" %>
+    </div>
+  <% end %>
   </div>
-
-  <div class="form-inputs">
-    <%= f.input :end_date %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+</div>
