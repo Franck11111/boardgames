@@ -8,6 +8,7 @@ Navbar
   </button>
 
 
+
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
@@ -42,6 +43,12 @@ Button
 <a class="btn btn-gradient" href="#">Button</a>
 
 <br>
+Back button
+<%= link_to boardgames_path, class: "back_action" do %>
+  <i class="fas fa-arrow-alt-circle-left"></i>
+<% end %>
+
+
 Search bar
 
 <br>
