@@ -1,5 +1,5 @@
-<div class="boardgame-add-form_container">
-  <div class="boardgame-add-form">
+<div class="form-container">
+  <div class="form-styled">
     <h1>Add game</h1>
     <%= simple_form_for(@boardgame) do |f| %>
       <%= f.error_notification %>
@@ -9,6 +9,10 @@
       <%= f.input :title %>
       <%= f.input :description %>
       <%= f.input :price_per_day %>
+<<<<<<< HEAD
+=======
+      <%= f.input :price_per_day %>
+>>>>>>> master
       <%= f.input :photo, as: :file %>
     </div>
 
